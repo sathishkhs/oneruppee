@@ -23,8 +23,8 @@ export const getLearnMoreById = async (req, res) => {
 
 export const createLearnMore = async (req, res) => {
   try {
-    const { title, description, img, videoLink } = req.body;
-    const newEntry = new CrowdModel({ title, description, img, videoLink });
+    const { title, description, img, videoLink,order_by } = req.body;
+    const newEntry = new CrowdModel({ title, description, img, videoLink, order_by });
     await newEntry.save();
     res.status(201).json(newEntry);
   } catch (error) {
