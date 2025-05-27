@@ -12,6 +12,10 @@ const subscriptionAmountSchema = new mongoose.Schema({
   des:{
     type:String,
     required: true,
+  }, 
+  order_by: {
+    type: Number,
+    default:0
   }
 });
 
