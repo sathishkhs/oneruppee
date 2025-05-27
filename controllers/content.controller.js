@@ -18,7 +18,7 @@ export const getContent = async (req, res) => {
 
 export const createSubscriptionAmount = async (req, res) => {
   try {
-    const { amount,type,des } = req.body;
+    const { amount,type,des, order_by } = req.body;
     const newAmount = new SubscriptionAmount({ amount,type,des, order_by });
     await newAmount.save();
     res.status(201).json({ message: "Subscription Amount created", newAmount });
