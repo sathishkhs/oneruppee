@@ -33,7 +33,7 @@ export const getAllFAQs = async (req, res) => {
 // Update FAQ by ID
 export const updateFAQById = async (req, res) => {
   try {
-    const {id, title, description } = req.body;
+    const {id, title, description, order_by } = req.body;
 
     if (!title && !description) {
       return res.status(400).json({ message: "At least one field (title or description) must be provided" });
@@ -41,7 +41,7 @@ export const updateFAQById = async (req, res) => {
 
     const updatedFAQ = await FAQ.findByIdAndUpdate(
       id,
-      { title, description },
+      { title, description, order_by },
       { new: true, runValidators: true }
     );
 
