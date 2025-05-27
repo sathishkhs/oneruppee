@@ -9,7 +9,7 @@ export const createSubscriptionPlan = async (req, res) => {
       return res.status(400).json({ message: "All fields are required" });
     }
 
-    const newSubscription = new Subscription({ name, amount, duration });
+    const newSubscription = new Subscription({ name, amount, duration, order_by });
     await newSubscription.save();
 
     res.status(201).json({ message: "Subscription created", subscription: newSubscription });
@@ -34,11 +34,11 @@ export const getAllSubscriptionsPlan = async (req, res) => {
 export const updateSubscriptionByIdPlan = async (req, res) => {
   try {
     const { id } = req.body;
-    const { name, amount, duration } = req.body;
+    const { name, amount, duration, order_by } = req.body;
 
     const updated = await Subscription.findByIdAndUpdate(
       id,
-      { name, amount, duration },
+      { name, amount, duration, order_by },
       { new: true }
     );
 
