@@ -3,13 +3,13 @@ import FAQ from "../models/faq.model";
 // Create FAQ
 export const createFAQ = async (req, res) => {
   try {
-    const { title, description } = req.body;
+    const { title, description, order_by } = req.body;
 
     if (!title || !description) {
       return res.status(400).json({ message: "Title and description are required" });
     }
 
-    const newFAQ = new FAQ({ title, description });
+    const newFAQ = new FAQ({ title, description, order_by });
     await newFAQ.save();
 
     res.status(201).json({ message: "FAQ created successfully", faq: newFAQ });
