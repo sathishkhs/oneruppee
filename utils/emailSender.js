@@ -7,8 +7,8 @@ export  const emailTransporter = nodemailer.createTransport({
 	debug: true, 
 	secureConnection: false,
     auth: {
-        user:"admin@onenationfoundation.org", // Your email
-        pass: "ilhfmqzovrbhncmc", // Your email password or app password
+        user:process.env.EMAIL_SMTP_USERNAME, // Your email
+        pass: process.env.EMAIL_SMTP_PASSWORD, // Your email password or app password
     },
 	tls:{
 rejectUnAuthorized: true

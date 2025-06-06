@@ -151,7 +151,7 @@ export const createSubscription = async (req, res) => {
         const respoWati = await fetch(`https://live-mt-server.wati.io/333163/api/v1/sendTemplateMessage?whatsappNumber=${phoneNumber}`, {
           method: "POST",
           headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3ZmMwMDRkMS00ZjFhLTQyYjMtYTkyMC1mYTJiMmFkNjQ4ODMiLCJ1bmlxdWVfbmFtZSI6InN1Y2hldGFuQHNhaXByYWthc2hhbmEub3JnIiwibmFtZWlkIjoic3VjaGV0YW5Ac2FpcHJha2FzaGFuYS5vcmciLCJlbWFpbCI6InN1Y2hldGFuQHNhaXByYWthc2hhbmEub3JnIiwiYXV0aF90aW1lIjoiMDQvMTAvMjAyNSAxMDozODo1OSIsInRlbmFudF9pZCI6IjMzMzE2MyIsImRiX25hbWUiOiJtdC1wcm9kLVRlbmFudHMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBVE9SIiwiZXhwIjoyNTM0MDIzMDA4MDAsImlzcyI6IkNsYXJlX0FJIiwiYXVkIjoiQ2xhcmVfQUkifQ.JssZ_dKwOxx1wrN45pKbPis_4nocVyhb7mhu4z7fKWg`,
+          Authorization: process.env.WATI_TOKEN,
           "Content-Type": "application/json"
           },
           body: JSON.stringify({
@@ -284,7 +284,7 @@ export const createOneTimeDonation = async (req, res) => {
         const respoWati = await fetch(`https://live-mt-server.wati.io/333163/api/v1/sendTemplateMessage?whatsappNumber=${phoneNumber}`, {
           method: "POST",
           headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3ZmMwMDRkMS00ZjFhLTQyYjMtYTkyMC1mYTJiMmFkNjQ4ODMiLCJ1bmlxdWVfbmFtZSI6InN1Y2hldGFuQHNhaXByYWthc2hhbmEub3JnIiwibmFtZWlkIjoic3VjaGV0YW5Ac2FpcHJha2FzaGFuYS5vcmciLCJlbWFpbCI6InN1Y2hldGFuQHNhaXByYWthc2hhbmEub3JnIiwiYXV0aF90aW1lIjoiMDQvMTAvMjAyNSAxMDozODo1OSIsInRlbmFudF9pZCI6IjMzMzE2MyIsImRiX25hbWUiOiJtdC1wcm9kLVRlbmFudHMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBVE9SIiwiZXhwIjoyNTM0MDIzMDA4MDAsImlzcyI6IkNsYXJlX0FJIiwiYXVkIjoiQ2xhcmVfQUkifQ.JssZ_dKwOxx1wrN45pKbPis_4nocVyhb7mhu4z7fKWg`,
+          Authorization: process.env.WATI_TOKEN,
           "Content-Type": "application/json"
           },
           body: JSON.stringify({
