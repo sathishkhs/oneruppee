@@ -1,4 +1,4 @@
-import SupportQuery from "../models/supportQuery";
+import SupportQuery from "../models/supportQuery.js";
 
 // Submit a support query
 export const createSupportQuery = async (req, res) => {

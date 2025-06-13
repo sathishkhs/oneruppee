@@ -4,7 +4,7 @@ import {
   getTerms,
   updateTerms,
   deleteTerms,
-} from "../controllers/termAndcondtions.controller";
+} from "../controllers/termAndcondtions.controller.js";
 
 const router = express.Router();
 

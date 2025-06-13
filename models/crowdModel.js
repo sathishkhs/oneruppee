@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-
+// const mongoose = require("mongoose");
+import mongoose from "mongoose"
 const CrowdModelSchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },

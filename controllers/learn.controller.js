@@ -1,4 +1,4 @@
-import CrowdModel from "../models/crowdModel";
+import CrowdModel from "../models/crowdModel.js";
 
 export const getLearnMore = async (req, res) => {
   try {

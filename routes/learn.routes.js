@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import {getLearnMore,getLearnMoreById,createLearnMore,updateLearnMore,deleteLearnMore} from "../controllers/learn.controller"
+import {getLearnMore,getLearnMoreById,createLearnMore,updateLearnMore,deleteLearnMore} from "../controllers/learn.controller.js"
 
 router.get("/learn-more", getLearnMore);
 router.get("/learn-more/:id", getLearnMoreById);
