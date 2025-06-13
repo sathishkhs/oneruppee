@@ -41,7 +41,7 @@ export const sendVerificationOTP = async(req,res)=>{
 		 return res.status(200).json({ data });
 		}catch(err){
 			console.log("testttt",err.message)
-			return res.status(400).json({ error: "limit expired" });
+			return res.status(400).json({ error: "limit expired", message: err.message });
 		}
      }
 
