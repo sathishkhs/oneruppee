@@ -1,6 +1,6 @@
 import FAQ from "../models/faq.model.js";
 
-// Create FAQ
+// Create FAQ admin
 export const createFAQ = async (req, res) => {
   try {
     const { title, description, order_by } = req.body;
